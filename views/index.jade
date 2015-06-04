@@ -3,19 +3,7 @@ title=hackUState
 block content
   .bg-overlay
     body#body(onresize='resizeCanvas()')
-    canvas#MainCanvas
-    script.
-      var canvasName = "MainCanvas";
-      var backgroundColor = "#3A3A3A";
-      var lineColor = "#333333";
-      var planeColor = "#000000";
-      var pointColor = "#000000";
-      var planesActive = false;
-      var linesActive = true;
-      var pointsActive = false;
-      var lineDistance = 250; // keep less than 250-ish for framerate.
-      var ObjectCount = 75; // keep less than 150-ish for framerate.
-      
+    canvas#MainCanvas      
     style.
       #body {
       overflow: hidden;
@@ -28,43 +16,44 @@ block content
       left: 0;
       }
       
-    script(src='/Points.js')
-    //script(src='/EngineCore.js')
-    //script(src='/Main.js')
-  .content(id='#skrollr-body')
+    //script(src='/Points.js')
+    script(src='/EngineCore.js')
+    script(src='/Screen.js')
+  //.content(id='#skrollr-body')
+  .content.wrap
     section#main.montserrat
       .ui.page.grid
-        .row
-          .center.aligned.column
-            .content
-              img.logo(src='/images/logos/HackUStateLogo-5-02.png', onerror='this.onerror=null; this.src=/core/static/assets/images/hack-logo-white.png')
-              |   
-              .title
-              .tagline
-               | A hackathon in the mountains.
-              |                          
-              .description
-                | 32 hours
-              .date
+          .row
+            .center.aligned.column
+              .content
+                img.logo(src='/images/logos/HackUState-Logo.png', onerror='this.onerror=null; this.src=/core/static/assets/images/hack-logo-white.png')
+                .tagline
+                  | A hackathon in the mountains             
+                .description
+                  | 32 hours
+                .date
+                  br
+                  | fall 2015 &nbsp;
+                .location
+                  | USU Conference center
+                | 
                 br
-                | fall 2015 &nbsp;
-              .location
-                | USU Conference center
-              | 
-              br
-              br
-              |             
-              button.montserrat.green.outline.button(onclick="") Register
+                br
+                |             
+                button.montserrat.green.outline.button(onclick="") Register
 
-    section#sponsor
+    //section#sponsor
       .sponsor-title
         | SPONSORS
         .silver.tier               
-                       
-    section#footer.lato
+    script.
+      var youtubeLinks = ["https://youtu.be/vncIBREXCwU?t=14s", "https://youtu.be/2HQaBWziYvY", "https://youtu.be/dQw4w9WgXcQ", "https://youtu.be/hooKVstzbz0", "https://youtu.be/VXPgjsB0Xm0?t=1m", "https://youtu.be/oavMtUWDBTM", "https://youtu.be/JaAd8OuwwPk", "https://youtu.be/kxopViU98Xo"];
+      function getLink(){ return window.open(youtubeLinks[Math.floor(Math.random()*youtubeLinks.length)]); }
+        
+    //section#footer.lato
       .content
         | Built with 
-        a(href='http://youtu.be/yPar4PvRWAY', style='text-decoration: none')
+        a(href="javascript:getLink();", style='text-decoration: none')
           i.ui.red.heart.icon
         |  by the hackUSU team 2015.
       br

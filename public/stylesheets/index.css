@@ -42,7 +42,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom right, #E6E6E6 , #36A3CE);
+  background-image: linear-gradient(to bottom right, rgb(26, 26, 26) , rgb(57,61,66));
   opacity: .8;
 }
 
@@ -52,6 +52,12 @@ section {
   padding: 20px 0;
 }
 
+.wrap{
+  background: rgba(26, 26, 26, .75);
+  position: relative;
+  height: 100%;
+  padding: 20px 0;
+}
 
 section.content {
   height: 100%;
@@ -60,7 +66,7 @@ section.content {
 /* Custom Link Junk */
 a {
 
-  color: #36A3CE;
+  color: rgb(98, 191, 0);
 }
 
 a:hover {
@@ -102,7 +108,8 @@ section#main .ui.page.grid {
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: 1.7px;
-  color: #36A3CE;
+  color: rgb(98, 191, 0);
+  width: 100%;
 }
 
 .date,
@@ -122,7 +129,7 @@ section#main .ui.page.grid {
 }
 
 .description.span {
-  color: #36A3CE;
+  color: rgb(98, 191, 0);
 }
 
 button.outline{
@@ -131,9 +138,9 @@ button.outline{
   border-radius:3px;
   padding: 8px;
   margin-top: 18px;
-  color: white;
+  color: rgb(98, 191, 0);
   background: transparent;
-  border: solid white 2px;
+  border: solid rgb(98, 191, 0) 2px;
   opacity:.75;
   -webkit-transition: color 500ms, background 500ms;
   -moz-transition: color 500ms, background 500ms;
@@ -143,12 +150,12 @@ button.outline{
 }
 
 button.outline:hover {
-  background: white;
+  background: rgb(26, 26, 26);
   cursor: pointer;
 }
 
 button.outline.green:hover{
-  color: #36A3CE;
+  color: rgb(98, 191, 0);
 }
 
 button.outline.red:hover{
@@ -173,7 +180,7 @@ section#projects {
     font-weight: 700;
     letter-spacing: 1.7px;
     font-size: 3.2em;
-    color: #36A3CE;
+    color: rgb(98, 191, 0);
     margin-bottom: 80px;
     margin-top: 10px;
   }
@@ -188,11 +195,11 @@ section#projects {
   #projects p {
     font-size: 24px;
     padding-top: 10px;
-    color: #36A3CE;
+    color: rgb(98, 191, 0);
   }
 
   #projects i {
-    color: #36A3CE;
+    color: rgb(98, 191, 0);
   }
 
   #projects .projects-tech{
@@ -200,7 +207,7 @@ section#projects {
     font-weight: 700;
     letter-spacing: 1.7px;
     font-size: 3.2em;
-    color: #36A3CE;
+    color: rgb(98, 191, 0);
     margin-bottom: 80px;
     margin-top: 80px;
   }
@@ -324,11 +331,11 @@ section#organizer .name {
 
 /* SPONSOR PANEL */
 section#sponsor {
-  background: rgba(255, 255, 255, 1);
+  background: #1A1A1A;
   min-height: 120px;
   height: 20%;
   text-align: center;
-  color: #36A3CE;
+  color: rgb(98, 191, 0);
   /*color: rgb(56,153,179);*/
   padding-left:12%;
   padding-right:12%;
@@ -349,13 +356,13 @@ section#sponsor {
 
   #sponsor .sponsor-message a{
     text-decoration: none;
-    color: rgb(56,153,179);
+    color: rgb(98, 191, 0);
   }
 
   #sponsor .tier .title {
     font-size: 2.2em;
     margin-bottom: .7em;
-    border-bottom: 1px solid rgb(56, 153, 179);
+    border-bottom: 1px solid rgb(98, 191, 0);
     display: none;
   }
 
@@ -404,6 +411,7 @@ section#footer {
   min-height: 2em;
   height: auto;
   text-align: center;
+  bottom: 0%;
 }
 
 section#footer a.social {
