@@ -33,12 +33,21 @@ function resizeCanvas(){
 }
 
 //The main clock of the engine.
-setInterval(function() {
-    update();
-    physics();
-    draw();
-    frames++;
-}, 1000/FPS);
+//setInterval(function() {
+//    update();
+//    physics();
+//    draw();
+//    frames++;
+//}, 1000/FPS);
+
+function animloop(){
+  requestAnimationFrame(animloop);
+  update();
+  physics();
+  draw();
+  //frames++;
+};
+requestAnimationFrame(animloop);
 
 //physics function; A core function that handles the physics engine.
 function physics(){

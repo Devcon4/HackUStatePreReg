@@ -5,9 +5,6 @@ Fix stupid hover / skroll effect on white sections.
 
 */
 
-
-
-
 html,
 body {
   height: 100%;
@@ -16,7 +13,6 @@ body {
 }
 
 body {
-  background: url(/images/bw-bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -36,14 +32,13 @@ body {
 }
 
 .bg-overlay {
-  content:'';
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom right, rgb(26, 26, 26) , rgb(57,61,66));
-  opacity: .8;
+  background: rgb(234, 228, 197);
+  opacity: 1;
 }
 
 section {
@@ -53,7 +48,7 @@ section {
 }
 
 .wrap{
-  background: rgba(26, 26, 26, .75);
+  background: rgba(57,61,66,.25);
   position: relative;
   height: 100%;
   padding: 20px 0;
@@ -66,7 +61,7 @@ section.content {
 /* Custom Link Junk */
 a {
 
-  color: rgb(98, 191, 0);
+  color: rgb(142, 43, 71);
 }
 
 a:hover {
@@ -108,7 +103,7 @@ section#main .ui.page.grid {
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: 1.7px;
-  color: rgb(98, 191, 0);
+  color: rgb(142, 43, 71);
   width: 100%;
 }
 
@@ -129,7 +124,7 @@ section#main .ui.page.grid {
 }
 
 .description.span {
-  color: rgb(98, 191, 0);
+  color: rgb(142, 43, 71);
 }
 
 button.outline{
@@ -138,9 +133,9 @@ button.outline{
   border-radius:3px;
   padding: 8px;
   margin-top: 18px;
-  color: rgb(98, 191, 0);
+  color: rgb(142, 43, 71);
   background: transparent;
-  border: solid rgb(98, 191, 0) 2px;
+  border: solid rgb(142, 43, 71) 2px;
   opacity:.75;
   -webkit-transition: color 500ms, background 500ms;
   -moz-transition: color 500ms, background 500ms;
@@ -150,17 +145,16 @@ button.outline{
 }
 
 button.outline:hover {
-  background: rgb(26, 26, 26);
+  background: rgb(142, 43, 71);
   cursor: pointer;
 }
 
 button.outline.green:hover{
-  color: rgb(98, 191, 0);
+  color: rgb(142, 43, 71);
 }
 
 button.outline.red:hover{
-  color: rgb(106,60,57)
-}
+  color: rgb(142, 43, 71)}
 button.outline:focus {
   outline: 0;
 }
@@ -180,7 +174,7 @@ section#projects {
     font-weight: 700;
     letter-spacing: 1.7px;
     font-size: 3.2em;
-    color: rgb(98, 191, 0);
+    color: rgb(142, 43, 71);
     margin-bottom: 80px;
     margin-top: 10px;
   }
@@ -195,11 +189,11 @@ section#projects {
   #projects p {
     font-size: 24px;
     padding-top: 10px;
-    color: rgb(98, 191, 0);
+    color: rgb(142, 43, 71);
   }
 
   #projects i {
-    color: rgb(98, 191, 0);
+    color: rgb(142, 43, 71);
   }
 
   #projects .projects-tech{
@@ -207,7 +201,7 @@ section#projects {
     font-weight: 700;
     letter-spacing: 1.7px;
     font-size: 3.2em;
-    color: rgb(98, 191, 0);
+    color: rgb(142, 43, 71);
     margin-bottom: 80px;
     margin-top: 80px;
   }
@@ -335,7 +329,7 @@ section#sponsor {
   min-height: 120px;
   height: 20%;
   text-align: center;
-  color: rgb(98, 191, 0);
+  color: rgb(142, 43, 71);
   /*color: rgb(56,153,179);*/
   padding-left:12%;
   padding-right:12%;
@@ -356,13 +350,13 @@ section#sponsor {
 
   #sponsor .sponsor-message a{
     text-decoration: none;
-    color: rgb(98, 191, 0);
+    color: rgb(142, 43, 71);
   }
 
   #sponsor .tier .title {
     font-size: 2.2em;
     margin-bottom: .7em;
-    border-bottom: 1px solid rgb(98, 191, 0);
+    border-bottom: 1px solid rgb(142, 43, 71);
     display: none;
   }
 

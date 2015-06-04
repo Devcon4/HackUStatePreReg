@@ -5,15 +5,16 @@
 init();
 
 function init(){
-    var greenColors = ['rgb(98, 191, 0)', 'rgb(96, 173, 5)'];
-    var grayColors = ['#999999', '#2E2E2E'];
-    var blackColors = ["#171717", "#1A1A1A"];
-    var colorPalettes = [blackColors, grayColors, greenColors];
+    var pinkColors = ['rgb(142, 43, 71)', 'rgb(142, 43, 71)'];
+    var cyanColors = ['rgb(110, 215, 168)', 'rgb(110, 215, 168)'];
+    var grayColors = ['rgb(104, 104, 104)', 'rgb(104, 104, 104)'];
+    var tanColors = ["rgb(239, 232, 180)", "rgb(239, 232, 180)"];
+    var colorPalettes = [grayColors, cyanColors, pinkColors];
     resizeCanvas();
 
     var screenArea = width/height;
-    for(var k = 0; k < 100*screenArea; k++) {
-        gameObjects[gameObjects.length] = new GameObject("poly-"+k, new Vector3((Math.random()*width+100)-cWidth, (Math.random()*height+100)-cHeight, 0), Quaternions.identity(), mainCamera, new Polygon(250, (Math.random()*9) + 3));
+    for(var k = 0; k < 25*screenArea; k++) {
+        gameObjects[gameObjects.length] = new GameObject("poly-"+k, new Vector3((Math.random()*width+100)-cWidth, (Math.random()*height+100)-cHeight, 0), Quaternions.identity(), mainCamera, new Polygon(250, (Math.random()*6) + 3));
     }
 
     for(var i = 0; i < gameObjects.length; i++){
@@ -55,13 +56,13 @@ function makePolygon(GameObject, size, corners){
         GameObject.mesh[j] = new Vector3((corners[j].x * size) + (GameObject.position.x - (size / 2)), (corners[j].y * size) + (GameObject.position.y - (size / 2)), (corners[j].z * size) + (GameObject.position.z - (size / 2)));
     }
 
-    for(var k = 0; k < GameObject.mesh.length; k++){
-        if(GameObject.camera.active){
-            var rotV = Rotation(GameObject.mesh[k], GameObject.rotation);
-            rotV = Project(GameObject.camera, rotV);
-            GameObject.mesh[k] = new Vector2(rotV.x, rotV.y);
-        }
-    }
+    //for(var k = 0; k < GameObject.mesh.length; k++){
+        //if(GameObject.camera.active){
+            //var rotV = Rotation(GameObject.mesh[k], GameObject.rotation);
+            //rotV = Project(GameObject.camera, rotV);
+            //GameObject.mesh[k] = new Vector2(rotV.x, rotV.y);
+        //}
+    //}
 
     if(corners.length > 0) {
 
