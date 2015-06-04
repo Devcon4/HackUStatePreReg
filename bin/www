@@ -4,15 +4,15 @@
  * Module dependencies.
  */
 
-var app = require('../hackusu');
-var debug = require('debug')('hackusu:server');
+var app = require('../hackustate');
+var debug = require('debug')('hackustate:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '8080');
+var port = normalizePort(process.env.PORT || '8888');
 app.set('port', port);
 
 /**
