@@ -15,6 +15,7 @@ block content
         top: 0;
         left: 0;
       }
+<<<<<<< HEAD
   
     //.content
     
@@ -78,3 +79,56 @@ block content
   script(src='/EngineCore.js')
   script.
     init();
+=======
+      
+    //script(src='/Points.js')
+    script(src='/EngineCore.js')
+    script(src='/Screen.js')
+  //.content(id='#skrollr-body')
+  .content
+    section#main.montserrat
+      .ui.page.grid
+          .row
+            .center.aligned.column
+              .content
+                img.logo(src='/images/logos/HackUStateLogo-3 Final-03.png', onerror='this.onerror=null; this.src=/core/static/assets/images/hack-logo-white.png')
+                .tagline
+                  | A hackathon in the mountains             
+                .description
+                  | 32 hours
+                .date
+                  br
+                  | fall 2015 &nbsp;
+                .location
+                  | USU Conference center
+                | 
+                br
+                br
+                |             
+                button.montserrat.green.outline.button(onclick="location.href='https://hackustate.typeform.com/to/o2JljV?typeform-welcome=0'") Pre-Register
+
+    section#sponsor
+      .sponsor-title
+        | SPONSORS
+        .silver.tier               
+    script.
+      var youtubeLinks = ["https://youtu.be/vncIBREXCwU?t=14s", "https://youtu.be/2HQaBWziYvY", "https://youtu.be/dQw4w9WgXcQ", "https://youtu.be/hooKVstzbz0", "https://youtu.be/VXPgjsB0Xm0?t=1m", "https://youtu.be/oavMtUWDBTM", "https://youtu.be/JaAd8OuwwPk", "https://youtu.be/kxopViU98Xo"];
+      function getLink(){ return window.open(youtubeLinks[Math.floor(Math.random()*youtubeLinks.length)]); }
+              
+    section#footer.lato
+      .content
+        | Built with 
+        a(href="javascript:getLink();", style='text-decoration: none')
+          i.ui.red.heart.icon
+        |  by the hackUSU team 2015.
+      br
+      a.social(href='mailto:team@hackusu.org')
+        i.ui.icon.mail
+      |     
+      a.social(href='https://twitter.com/hackusu')
+        i.ui.icon.twitter
+      |     
+      a.social(href='https://www.facebook.com/HackUSU')
+        i.ui.icon.facebook
+    //script(src='mychart.js')
+>>>>>>> origin/master
