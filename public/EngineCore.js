@@ -2,120 +2,11 @@
  * Created by Devyn on 3/25/2015.
  */
 
-var c = document.getElementById("MainCanvas");
-var ctx = c.getContext("2d");
+var canvases = document.getElementsByTagName("canvas");
 
-var width = c.width, height = c.height;
-var cWidth = width/2, cHeight = height/2;
-
-var aspectRatio = 16/10;
-
-var mainCamera = new Camera(new Vector3(0,0,0), new Quaternion(0,0,0,0), 25);
-
-var FPS = 60;
-var frames = 0;
-
-//Array that holds all GameObjects in the game.
-var gameObjects = [];
-
-//resizeCanvas Function; resize's the screen to fit the browser.
-function resizeCanvas(){
-    c.width = window.innerWidth;
-    c.height = window.innerHeight;
-
-    width = c.width;
-    height = c.height;
-
-    cWidth = width/2;
-    cHeight = height/2;
-
-    ctx.translate(cWidth,cHeight);
-}
-
-//The main clock of the engine.
-//setInterval(function() {
-//    update();
-//    physics();
-//    draw();
-//    frames++;
-//}, 1000/FPS);
-
-function animloop(){
-  requestAnimationFrame(animloop);
-  update();
-  physics();
-  draw();
-  //frames++;
-};
-requestAnimationFrame(animloop);
-
-//physics function; A core function that handles the physics engine.
-function physics(){
-    for(var i = 0; i < gameObjects.length; i++){
-        var pos = gameObjects[i].position;
-        var vel = gameObjects[i].velocity;
-
-        gameObjects[i].position = new Vector3(pos.x + vel.x, pos.y + vel.y, pos.z + vel.z);
-    }
-}
-
-//draw Function; A core function that draws the screen.
-function draw(){
-    ctx.clearRect(-cWidth, -cHeight, width, height);
-
-    for(var i = 0; i < gameObjects.length; i++){
-        gameObjects[i].type.render(gameObjects[i]);
-    }
-
-/*
-    ctx.strokeStyle = '#FF0000';
-    ctx.globalAlpha = .5;
-    ctx.fillStyle = '#FF0000';
-    ctx.beginPath();
-    ctx.moveTo(.5,.5);
-    ctx.lineTo(.5,-.5);
-    ctx.lineTo(-.5,-.5);
-    ctx.lineTo(-.5,.5);
-    ctx.lineTo(.5,.5);
-    ctx.closePath();
-    ctx.stroke();
-    ctx.fill();
-*/
-
-/*    ctx.fillStyle = '#000000';
-    ctx.globalAlpha = 1;
-    ctx.strokeStyle = '#000';*/
-
-    if(false){
-
-      ctx.strokeStyle = '#FF0000';
-      ctx.globalAlpha = .5;
-      ctx.fillStyle = '#FF0000';
-
-      ctx.beginPath();
-      ctx.moveTo(mainCamera.nearPlane.rect.xx.x, mainCamera.nearPlane.rect.xx.y);
-      ctx.lineTo(mainCamera.nearPlane.rect.xy.x, mainCamera.nearPlane.rect.xy.y);
-      ctx.lineTo(mainCamera.nearPlane.rect.yy.x, mainCamera.nearPlane.rect.yy.y);
-      ctx.lineTo(mainCamera.nearPlane.rect.yx.x, mainCamera.nearPlane.rect.yx.y);
-      ctx.lineTo(mainCamera.nearPlane.rect.xx.x, mainCamera.nearPlane.rect.xx.y);
-      ctx.closePath();
-      ctx.stroke();
-      ctx.fill();
-
-      ctx.fillStyle = '#0000FF';
-
-      ctx.beginPath();
-      ctx.moveTo(mainCamera.farPlane.rect.xx.x, mainCamera.farPlane.rect.xx.y);
-      ctx.lineTo(mainCamera.farPlane.rect.xy.x, mainCamera.farPlane.rect.xy.y);
-      ctx.lineTo(mainCamera.farPlane.rect.yy.x, mainCamera.farPlane.rect.yy.y);
-      ctx.lineTo(mainCamera.farPlane.rect.yx.x, mainCamera.farPlane.rect.yx.y);
-      ctx.lineTo(mainCamera.farPlane.rect.xx.x, mainCamera.farPlane.rect.xx.y);
-      ctx.closePath();
-      ctx.stroke();
-      ctx.fill();
-
-      ctx.globalAlpha = 1;
-      ctx.strokeStyle = '#000';
+function init(){
+    for(var i = 0; i < canvases.length; i++){
+        var thisGame = new Game(canvases[i]);
     }
 }
 
@@ -148,13 +39,13 @@ function GameObject (Name, Position, Rotation, Camera, Type){
 }
 
 // Camera constructor; takes Position(Vector3), Rotation (Quaternion), RenderDistance (number) and projects the scene onto a viewing face.
-function Camera(Position, Rotation, RenderDistance){
+function Camera(Position, Rotation, RenderDistance, Game){
   this.position = Position;
   this.rotation = Rotation;
   this.renderDistance = RenderDistance;
   this.active = true;
   this.fov = 90;
-  this.plane = new Plane(new Vector3(0,0,0), new Rect(this.position.x-width, this.position.y-height));
+  this.plane = new Plane(new Vector3(0,0,0), new Rect(this.position.x-Game.width, this.position.y-Game.height));
 }
 
 //Plane constructor; takes Position(Vector3), Rect(Rect) and represents a 2D plane.

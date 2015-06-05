@@ -32,12 +32,11 @@ body {
 }
 
 .bg-overlay {
-  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgb(234, 228, 197);
+  background: rgb(234, 230, 214);
   opacity: 1;
 }
 
@@ -48,10 +47,11 @@ section {
 }
 
 .wrap{
-  background: rgba(57,61,66,.25);
-  position: relative;
-  height: 100%;
-  padding: 20px 0;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(104, 104, 104, .6);
 }
 
 section.content {
@@ -61,11 +61,11 @@ section.content {
 /* Custom Link Junk */
 a {
 
-  color: rgb(142, 43, 71);
+  color: rgb(112, 196, 188);
 }
 
 a:hover {
-  color: #545454;
+  color: rgb(104, 104, 104);
 }
 
 /* Main Panel */
@@ -77,12 +77,13 @@ a:hover {
 section#main {
   padding: 0;
   min-height: 75vh;
+  background: rgb(234, 228, 197);
 }
 
 section#main .ui.page.grid {
   position:absolute;
   width:100%;
-  height:50%;
+  height: auto;
   top:15%;
 }
 
@@ -103,7 +104,7 @@ section#main .ui.page.grid {
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: 1.7px;
-  color: rgb(142, 43, 71);
+  color: rgb(170, 70, 109);
   width: 100%;
 }
 
@@ -114,6 +115,7 @@ section#main .ui.page.grid {
   margin-top:2px;
   text-transform: uppercase;
   display: inline-block;
+
 }
 
 .description {
@@ -124,7 +126,7 @@ section#main .ui.page.grid {
 }
 
 .description.span {
-  color: rgb(142, 43, 71);
+  color: rgb(112, 196, 188);
 }
 
 button.outline{
@@ -133,9 +135,9 @@ button.outline{
   border-radius:3px;
   padding: 8px;
   margin-top: 18px;
-  color: rgb(142, 43, 71);
+  color: rgb(170, 70, 109);
   background: transparent;
-  border: solid rgb(142, 43, 71) 2px;
+  border: solid rgb(170, 70, 109) 2px;
   opacity:.75;
   -webkit-transition: color 500ms, background 500ms;
   -moz-transition: color 500ms, background 500ms;
@@ -145,18 +147,28 @@ button.outline{
 }
 
 button.outline:hover {
-  background: rgb(142, 43, 71);
+  background: rgb(170, 70, 109);
   cursor: pointer;
 }
 
 button.outline.green:hover{
-  color: rgb(142, 43, 71);
+  color: rgb(170, 70, 109);
 }
 
 button.outline.red:hover{
-  color: rgb(142, 43, 71)}
+  color: rgb(170, 70, 109)
+}
 button.outline:focus {
   outline: 0;
+}
+
+/* MainCanvas */
+
+#MainCanvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* PROJECTS */
@@ -174,7 +186,7 @@ section#projects {
     font-weight: 700;
     letter-spacing: 1.7px;
     font-size: 3.2em;
-    color: rgb(142, 43, 71);
+    color: rgb(112, 196, 188);
     margin-bottom: 80px;
     margin-top: 10px;
   }
@@ -189,11 +201,11 @@ section#projects {
   #projects p {
     font-size: 24px;
     padding-top: 10px;
-    color: rgb(142, 43, 71);
+    color: rgb(112, 196, 188);
   }
 
   #projects i {
-    color: rgb(142, 43, 71);
+    color: rgb(112, 196, 188);
   }
 
   #projects .projects-tech{
@@ -201,7 +213,7 @@ section#projects {
     font-weight: 700;
     letter-spacing: 1.7px;
     font-size: 3.2em;
-    color: rgb(142, 43, 71);
+    color: rgb(112, 196, 188);
     margin-bottom: 80px;
     margin-top: 80px;
   }
@@ -301,7 +313,6 @@ section#who-we-are {
     border-radius: 5px;
   }
 
-
 /* ORGANIZER PANEL */
 section#organizer .organizer-title {
   font-family: 'Montserrat', 'Helvetica Neue','Helvetica', 'Arial', sans-serif;
@@ -323,13 +334,24 @@ section#organizer .name {
   margin-top: 24px;
 }
 
+/* Schedule PANEL */
+.schedule.title {
+  min-height: 120px;
+  height: 50%;
+  text-align: center;
+  color: rgb(170, 70, 109);
+  /*color: rgb(56,153,179);*/
+  padding-left:12%;
+  padding-right:12%;
+}
+
 /* SPONSOR PANEL */
 section#sponsor {
-  background: #1A1A1A;
+  background: rgb(104, 104, 104);
   min-height: 120px;
-  height: 20%;
+  height: 50%;
   text-align: center;
-  color: rgb(142, 43, 71);
+  color: rgb(112, 196, 188);
   /*color: rgb(56,153,179);*/
   padding-left:12%;
   padding-right:12%;
@@ -350,13 +372,13 @@ section#sponsor {
 
   #sponsor .sponsor-message a{
     text-decoration: none;
-    color: rgb(142, 43, 71);
+    color: rgb(112, 196, 188);
   }
 
   #sponsor .tier .title {
     font-size: 2.2em;
     margin-bottom: .7em;
-    border-bottom: 1px solid rgb(142, 43, 71);
+    border-bottom: 1px solid rgb(112, 196, 188);
     display: none;
   }
 
