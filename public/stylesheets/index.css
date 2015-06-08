@@ -104,7 +104,6 @@ section#main .ui.page.grid {
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: 1.7px;
-  color: rgb(170, 70, 109);
   width: 100%;
 }
 
@@ -166,11 +165,36 @@ button.outline:focus {
 
 #MainCanvas {
   margin: 0;
+  border: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
 
+/* faq */
+section#faq {
+  background: rgb(112, 196, 188);
+  text-align: center;
+  height: auto;
+}
+
+.question {
+  font-size: 2em;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.answer {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+/* VENUE */
+section#venue {
+  background: rgb(170, 70, 109);
+  text-align: center;
+  height: 75%;
+}
 /* PROJECTS */
 
 section#projects {
@@ -260,80 +284,6 @@ section#who-we-are {
     font-size: 2em;
     padding-bottom: 10px;
   }
-
-  /* CHARTS */
-
-  #yearChart-Legend li {
-    text-align: center;
-    display: block;
-    padding-left: 30px;
-    position: relative;
-    margin-bottom: 4px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: default;
-    -webkit-transition: background-color 200ms ease-in-out;
-    -moz-transition: background-color 200ms ease-in-out;
-    -o-transition: background-color 200ms ease-in-out;
-    transition: background-color 200ms ease-in-out;
-  }
-
-  #yearChart-Legend li span {
-    display: block;
-    position: absolute;
-    left: 150px;
-    top: 0;
-    width: 20px;
-    height: 100%;
-    border-radius: 5px;
-  }
-
-  #majorChart-Legend li {
-    text-align: center;
-    display: block;
-    padding-left: 30px;
-    position: relative;
-    margin-bottom: 4px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: default;
-    -webkit-transition: background-color 200ms ease-in-out;
-    -moz-transition: background-color 200ms ease-in-out;
-    -o-transition: background-color 200ms ease-in-out;
-    transition: background-color 200ms ease-in-out;
-  }
-
-  #majorChart-Legend li span {
-    display: block;
-    position: absolute;
-    left: 150px;
-    top: 0;
-    width: 20px;
-    height: 100%;
-    border-radius: 5px;
-  }
-
-/* ORGANIZER PANEL */
-section#organizer .organizer-title {
-  font-family: 'Montserrat', 'Helvetica Neue','Helvetica', 'Arial', sans-serif;
-    font-size: 4em;
-    font-weight: 700;
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-section#organizer img {
-  margin: 0 auto;
-  border: 8px solid white;
-  height: 200px;
-  width: 200px;
-}
-
-section#organizer .name {
-  font-size: 2em;
-  margin-top: 24px;
-}
-
 /* Schedule PANEL */
 .schedule.title {
   min-height: 120px;
@@ -349,9 +299,8 @@ section#organizer .name {
 section#sponsor {
   background: rgb(104, 104, 104);
   min-height: 120px;
-  height: 50%;
+  height: auto;
   text-align: center;
-  color: rgb(112, 196, 188);
   /*color: rgb(56,153,179);*/
   padding-left:12%;
   padding-right:12%;
@@ -378,6 +327,7 @@ section#sponsor {
   #sponsor .tier .title {
     font-size: 2.2em;
     margin-bottom: .7em;
+    text-align: center;
     border-bottom: 1px solid rgb(112, 196, 188);
     display: none;
   }
@@ -435,6 +385,9 @@ section#footer a.social {
   color: white;
   margin: 0 8px;
 }
+a.social:hover {
+  color: rgb(234, 228, 197);
+}
 
 section#footer .icon:hover {
   text-shadow: 0 0 3px white;
@@ -481,11 +434,6 @@ section#footer .icon:hover {
   }
   section#footer {
     margin-top: -80px;
-  }
-
-  .ui.page.grid{
-    position: relative !important;
-    padding: 50px 0 !important;
   }
 
   .title {
