@@ -5,7 +5,6 @@ block content
     //body#body(onresize='resizeCanvas()')
       
   section#main.montserrat
-    //canvas#MainCanvas
     .ui.page.grid
       .row
         .center.aligned.column
@@ -136,6 +135,14 @@ block content
     .title
       | SPONSORS
       .silver.tier
+        a(href='http://www.usu.edu/')
+          img(src='images/logos/usu-logo.png')
+        a(href='http://hackusu.org')
+          img(src='images/logos/hackusu-logo.png')
+        a(href='http://www.digitalocean.com')
+          img(src='images/logos/digitalocean-logo.png')
+        a(href='https://www.stickermule.com/unlock?ref_id=4213360701')
+          img(src='images/logos/stickermule-logo.png')
     .interested
       | Interested in sponsoring hackUstate?
       br
@@ -159,8 +166,3 @@ block content
     |     
     a.social(href='https://www.facebook.com/HackUstate')
       i.ui.icon.facebook
-  
-  script(src='/Screen.js')
-  script(src='/EngineCore.js')
-  script.
-    init();

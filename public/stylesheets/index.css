@@ -145,7 +145,7 @@ button.outline:focus {
   outline: 0;
 }
 
-/* faq */
+/* FAQ */
 section#faq {
   background: rgb(112, 196, 188);
   text-align: center;
@@ -413,9 +413,15 @@ section#footer .icon:hover {
 
   section {
     position: relative !important;
-    height: 100% !important;
-    /*min-height: 100% !important;*/
+    /* height: 100% !important; */
+    /* min-height: 100% !important; */
   }
+
+  .logo {
+    height: 75%;
+    width: 75%;
+  }
+
   section#footer {
     margin-top: -80px;
   }
@@ -425,7 +431,10 @@ section#footer .icon:hover {
   }
 
   .tagline {
-    font-size: .9em;
+    font-size: 1.5em;
+  }
+  .description {
+    font-size: 1em;
   }
 
   .button {
