@@ -281,7 +281,7 @@ section#who-we-are {
 
 /* SPONSOR PANEL */
 section#sponsor {
-  background: rgb(39, 39, 39);
+  background: rgb(222, 255, 252);
   min-height: 120px;
   height: auto;
   text-align: center;
@@ -314,6 +314,22 @@ section#sponsor {
     text-align: center;
     border-bottom: 1px solid rgb(112, 196, 188);
     display: none;
+  }
+
+  #sponsor .partners {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 4em;
+    letter-spacing: 8px;
+    padding-bottom: 20px;
+  }
+
+  #sponsor .partner img {
+    width: 200px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 16px;
   }
 
   #sponsor a{
@@ -460,10 +476,28 @@ section#footer .icon:hover {
     display: inline-block;
   }
 
+  section#sponsor .tier .partner {
+    display: inline-block;
+  }
+
+  .partners {
+    font-size: 2.8em !important;
+  }
+
+  #sponsor .partner img {
+    display: block !important;
+    position: relative !important;
+    margin-top: 1em !important;
+    margin-right: auto !important;
+    margin-bottom: 5em !important;
+    margin-left: auto !important;
+    width: 75% !important;
+  }
+
   #sponsor img {
     display: block !important;
     position: relative !important;
-    margin: 4em auto !important;
+    margin: 1.2em auto !important;
     width: 75% !important;
   }
 
