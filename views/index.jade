@@ -4,114 +4,160 @@ block content
   .bg-overlay
     //body#body(onresize='resizeCanvas()')
       
-    style.
-      #body {
-        overflow: hidden;
-      }
-      #MainCanvas {
-        position: absolute;
-        margin: 0;
-        top: 0;
-        left: 0;
-      }
-  
-    //.content
-    
   section#main.montserrat
-    canvas#MainCanvas
-    .ui.page.grid.wrap
+    //canvas#MainCanvas
+    .ui.page.grid
       .row
         .center.aligned.column
           .content
             img.logo(src='/images/logos/HackUStateLogo-3 Final2-01.png', onerror='this.onerror=null; this.src=/core/static/assets/images/hack-logo-white.png')
+            br
+            br
+            br
+            br
             .tagline
-              | A hackathon in the mountains
+              | UTAHS FIRST INTERCOLLEGIATE HACKATHON 
             .description
-              | 32 hours
+              | 300 STUDENTS | 36 HOURS | 100 PRIZES 
             .date
               br
-              | fall 2015 &nbsp;
+              | NOVEMBER 6 - 7 @ &nbsp;
             .location
-              | USU Conference center
+              | USU CONFERENCE CENTER
             | 
             br
             br
             |             
-            button.montserrat.green.outline.button(onclick=onclick="location.href='https://hackustate.typeform.com/to/o2JljV?typeform-welcome=0'") Pre-Register
+            button.montserrat.outline.button(onclick=onclick="location.href='https://hackustate.typeform.com/to/o2JljV?typeform-welcome=0'") Pre-Register
 
+  section#faq
+    .title
+      | FAQ
+    |     
+    .ui.three.column.stackable.page.grid
+      .row
+        .column
+          .question
+            | What is a hackathon?
+          |           
+          .answer
+            | A 
+            a(href='https://medium.com/@alexkern/what-is-a-hackathon-c2162b893b0a') hackathon 
+            | is an event for students at all skill levels; which encourages learning new technology, collaborating with other 
+            | students, and creating something mind-blowing.  
+        |         
+        .column
+          .question
+            | How can I register?
+          |           
+          .answer
+            | Pre-Register now because our seats are going fast! 
+            | If you're a USU Student, you're guaranteed a seat but still need to pre-register. 
+        |         
+        .column
+          .question
+            | Who is invited?
+          |           
+          .answer
+            | All undergraduate students from any university are welcome.
+            | Non-USU students must be 18 or older. Unfortunately, high school
+            | students cannot attend.
+      |       
+      .row
+        .column
+          .question
+            | How much is it?
+          |           
+          .answer
+            | The event is free to all students and includes food, drinks, and a bunch of swag for the entire hackathon!
+        | 
+        .column
+          .question
+            | What's the schedule?
+          |           
+          .answer
+            | hackUstate will begin at 9AM on Friday November 6th and end the next day around 6 PM. 
+            | Check back soon for more details on the schedule!
+        |          
+        .column
+          .question
+            | Will there be buses?
+          |           
+          .answer
+            | We would like to provide buses from BYU, UVU, and UofU. In order for us to do so, we need at least 50 attendees from each school.
+            | Please contact us to find out how many hackers you need to invite and to help organize a bus for your school! 
+        |         
+      |       
+      .row
+        .column
+          .question
+            | What should I bring?
+          |           
+          .answer
+            | All attendees are required to bring their valid student ID
+            | for admission (name must match registration) and a laptop
+            | for hacking. 
+        |         
+        .column
+          .question
+            | What should I not bring?
+          |           
+          .answer
+            | USU is a dry campus but don't worry, we'll have lots of energy drinks!
+            | Also please no firearms, knives, or weapons of any kind.
+        .column
+          .question
+            | What food will you provide?
+          |           
+          .answer
+            | All meals from breakfast on Friday to Lunch on Saturday, as well as snacks in between, are covered by us.  
+            | We'll try to accommodate dietary restrictions as best we can!
+        |      
+      |       
+      .row
+        .column
+        | 
+        .column
+          .question
+            | Other Questions?
+          |           
+          .answer
+            | You can get in touch with us at 
+            a(href='mailto:team@hackustate.org') team@hackustate.org
+            |  or via 
+            a(href='http://twitter.com/hackustate') Twitter
+            | , or 
+            a(href='https://www.facebook.com/Hackustate') Facebook
+            | .
+        .column
+        | 
+      | 
   section#sponsor
     .title
       | SPONSORS
       .silver.tier
     .interested
-      | Interested in sponsoring HackUState? Email us at: &nbsp;
-    a.social(href='mailto:team@hackusu.org')
+      | Interested in sponsoring hackUstate?
+      br
+    a.social(href='mailto:sponsor@hackustate.org')
       i
-      | team@hackUstate.org
-  Section#faq
-    .title
-      | FAQ
-    .ui.two.column.page.grid
-      .row.equal.height
-        .column.right.aligned
-          .question
-            | What is a hack-a-thon?
-        .column.left.aligned
-            .answer
-              | Alex this one is for you...
-      .row.equal.height
-        .column.right.aligned
-          .question
-            | Who can attend?
-        .column.left.aligned
-          .answer
-            | Anyone who is a student!
-      .row.equal.height
-        .column.right.aligned
-          .question
-            | What if I don't know code?
-        .column.left.aligned
-          .answer
-            | Come anyways! This needs more too it...
-      .row.equal.height
-        .column.right.aligned
-          .question
-            | Wait, do I have to pay anything?
-        .column.left.aligned
-          .answer
-            | Nope. This is a free event for students by students.
+      | sponsor@hackustate.org
 
-  section#main.montserrat
-    canvas#MainCanvas
-    .ui.page.grid.wrap
-      .row
-        .center.aligned.column
-          .content
-            .title
-              | SCHEDULE
-            .content
-              | Here is another one for alex...
-              
-  script.
-    var youtubeLinks = ["https://youtu.be/vncIBREXCwU?t=14s", "https://youtu.be/2HQaBWziYvY", "https://youtu.be/dQw4w9WgXcQ", "https://youtu.be/hooKVstzbz0", "https://youtu.be/VXPgjsB0Xm0?t=1m", "https://youtu.be/oavMtUWDBTM", "https://youtu.be/JaAd8OuwwPk", "https://youtu.be/kxopViU98Xo"];
-    function getLink() { return window.open(youtubeLinks[Math.floor(Math.random()*youtubeLinks.length)]); }
-      
   section#footer.lato
     .content
-      | We need the right links here...
       br
       | Built with 
-      a(href="javascript:getLink();", style='text-decoration: none')
+      a(href="https://www.youtube.com/watch?v=mxp2l3Fh15o", style='text-decoration: none')
         i.ui.red.heart.icon
-      |  by the hackUSU team 2015.
+      |  by the hackUstate team 2015.
     br
-    a.social(href='mailto:team@hackusu.org')
+    a.social(href='mailto:team@hackustate.org')
       i.ui.icon.mail
     |     
-    a.social(href='https://twitter.com/hackusu')
+    a.social(href='https://twitter.com/hackustate')
       i.ui.icon.twitter
     |     
-    a.social(href='https://www.facebook.com/HackUSU')
+    a.social(href='https://www.facebook.com/HackUstate')
       i.ui.icon.facebook
   
   script(src='/Screen.js')

@@ -27,15 +27,6 @@ textarea {
   float: left;
 }
 
-.hacksquare {
-  outline: 2px solid black;
-  outline-offset: 2px;
-  float: left;
-  display: inline-block !important;
-  margin-right: .5em !important ;
-  height: 1em;
-  width: 1em;
-}
 
 #header{
   background: url(../assets/images/background.jpg) no-repeat center center fixed;
